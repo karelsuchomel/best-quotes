@@ -1,0 +1,197 @@
+html, body
+  background: white
+  margin: 0px
+
+#content
+  position: relative
+  min-height: 100vh
+  max-height: 100vh
+  background: darken(lavender, 25%)
+
+#content.dimmed
+  transition: 0.3s
+  background: darken(lavender, 15%)
+
+// QUOTATION
+.quote-wrap
+  position: absolute
+  top: 50%
+  transform: translateY(-55%)
+  color: white
+  font-family: 'Roboto Slab', serif
+  font-size: 4em
+  font-weight: 400
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  width: 100%
+  text-align: center
+
+// ADD - BUTTON
+.add-quote-button
+  position: relative
+  display: inline-block
+  float: right
+  height: 30px
+  right: 15px
+  top: 15px
+  background: white
+  border-radius: 15px
+  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.1)
+  padding: 4px 12px
+  box-sizing: border-box
+  cursor: pointer
+
+  .dot-button
+    display: inline-block
+    width: 8px
+    height: 8px
+    border-radius: 4px
+
+    background-color: darken(lavender, 25%)
+    margin: 0px 1px
+    cursor: pointer
+
+  &:active
+    box-shadow: inset 0px -2px 2px 0px rgba(0,0,0,0.8)
+
+    .dot
+      transform-origin: top center
+      transform: rotateX(30deg)
+
+// FORM
+.form-wrap
+  display: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateY(-50%) translateX(-50%)
+  width: 500px
+  max-width: 90%
+  border-radius: 3px
+  background: white
+  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.1)
+  transition: height 0.3s
+  transform-origin: top right
+
+.form-wrap.visible
+  display: block
+  animation-name: form-zoom-in
+  animation-duration: 0.5s
+  animation-fill-mode: forwards
+  animation-timing-function: ease
+
+.form-wrap.hide
+  display: block
+  animation-name: form-zoom-out
+  animation-duration: 0.5s
+  animation-fill-mode: forwards
+  animation-timing-function: ease
+
+// animations
+@keyframes form-zoom-in
+  from
+    transform: translateY(-50%) translateX(-50%) scale(0)
+  to
+    transform: translateY(-50%) translateX(-50%) scale(1)
+
+@keyframes form-zoom-out
+  from
+    transform: translateY(-50%) translateX(-50%) scale(1)
+  to
+    transform: translateY(-50%) translateX(-50%) scale(0)
+
+.header-progress
+  padding: 10px 0px
+  border-bottom: 1px solid #DDD
+  text-align: center
+
+  .dot
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 5px
+    background-color: lavender
+    margin: 0px 5px
+    cursor: pointer
+
+    &.current
+      transition: 0.3s
+      background-color: darken(lavender, 20%)
+
+.step-content
+  padding: 20px
+  overflow: hidden
+  position: relative
+
+  input, textarea
+    width: 300px
+    max-width: 90%
+    display: block
+    margin: 20px auto
+    border-radius: 3px
+    background: white
+    padding: 10px 12px
+    border: 1px solid #DDD
+    font-family: sans-serif
+
+    &:focus
+      transition: 0.3s
+      border: 1px solid darken(lavender, 20%)
+
+  span
+    text-transform: uppercase
+    display: block
+    margin: 30px auto
+    font-family: sans-serif
+    font-weight: bold
+    font-size: 1.2em
+    color: darken(lavender, 35%)
+    text-align: center
+
+  button.button-next
+    display: block
+    position: relative
+    margin: 30px auto
+    border: none
+    padding: 10px 18px
+    background: darken(lavender, 35%)
+    border-radius: 3px
+    box-shadow: 0px 2px darken(lavender, 55%)
+    color: white
+    cursor: pointer
+
+    &:active
+      top: 2px
+      box-shadow: inset 0px 2px 3px rgba(0,0,0,0.2)
+
+  .step
+    display: none
+
+    &.is-showing
+      display: block
+
+// animations
+
+.animate-out
+  position: absolute
+  animation-duration: 0.5s
+  animation-name: animate-out
+  animation-fill-mode: forwards
+  animation-timing-function: ease
+
+.animate-in
+  animation-duration: 0.5s
+  animation-name: animate-in
+  animation-fill-mode: forwards
+  animation-timing-function: ease
+
+@keyframes animate-out
+  from
+    transform: translate(0, 0)
+  to
+    transform: translate(-100vw, 0)
+
+@keyframes animate-in
+  from
+    transform: translate(100vw, 0)
+  to
+    transform: translate(0, 0)

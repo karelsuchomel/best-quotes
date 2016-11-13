@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title Fill form in steps
+    meta(charset="UTF-8")
+    meta(name="viewport", content="initial-scale=1")
+    
+    // link css style sheet
+    link(rel="stylesheet", type="text/css", href="styles.css")
+
+    // fonts
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=latin-ext",
+    rel="stylesheet")
+      
+  body
+    #content
+      .quote-wrap Insert text here
+
+      #add-quote.add-quote-button
+        .dot-button
+        .dot-button
+        .dot-button
+
+    .form-wrap
+        .header-progress
+          .dot.current
+          .dot
+          .dot
+        form(action="", method="POST", class="step-content")
+          .step.is-showing
+            span Step 1
+            input(type="text", name="userName", placeholder="Name")
+            input(type="text", name="userSurName", placeholder="Sur name")
+            button(type="button" class="button-next") Next
+          .step
+            span Step 2
+            textarea(type="text", name="userSurName", placeholder="Sur name")
+            button(type="button" class="button-next") Next
+          .step
+            span Step 3
+            input(type="text", name="userName", placeholder="Name")
+            input(type="text", name="userSurName", placeholder="Sur name")
+            button(type="submit", class="button-next") Create question
+
+    script(src="step-form-behave.js")
