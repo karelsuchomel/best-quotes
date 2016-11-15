@@ -23,9 +23,11 @@ html, body {
   text-align: center;
   padding: 0px 15px;
   box-sizing: border-box;
+  will-change: transform;
 }
 
 .quote-wrap.faded {
+  opacity: 0;
   animation-name: tex-fade-out;
   animation-duration: 0.5s;
   fill-mode: forwards;
