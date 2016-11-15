@@ -11,13 +11,14 @@
   </head>
   <body>
     <div id="content">
-      <div class="quote-wrap">Insert text here</div>
-      <div id="add-quote" class="add-quote-button">
+      <div class="quote-wrap">Insert text here, insert text here</div>
+      <button tabindex="2" id="add-quote" class="add-quote-button">
         <div class="dot-button"></div>
         <div class="dot-button"></div>
         <div class="dot-button"></div>
-      </div>
+      </button>
     </div>
+    <!-- TODO - ability to go back in form-->
     <div class="form-wrap">
       <div class="header-progress">
         <div class="dot current"></div>
@@ -26,18 +27,18 @@
       </div>
       <form action="" method="POST" class="step-content">
         <div class="step is-showing"><span>Step 1</span>
-          <input type="text" name="userName" placeholder="Name">
-          <input type="text" name="userSurName" placeholder="Sur name">
-          <button type="button" class="button-next">Next</button>
+          <input type="text" name="userName" placeholder="Name" tabindex="2">
+          <input type="text" name="userSurName" placeholder="Sur name" tabindex="3">
+          <button type="button" tabindex="4" class="button-next">Next</button>
         </div>
         <div class="step"><span>Step 2</span>
-          <textarea type="text" name="userSurName" placeholder="Sur name"></textarea>
-          <button type="button" class="button-next">Next</button>
+          <textarea type="text" name="userSurName" placeholder="Sur name" tabindex="2"></textarea>
+          <button type="button" tabindex="3" class="button-next">Next</button>
         </div>
         <div class="step"><span>Step 3</span>
-          <input type="text" name="userName" placeholder="Name">
-          <input type="text" name="userSurName" placeholder="Sur name">
-          <button type="submit" class="button-next">Create question</button>
+          <input type="text" name="userName" placeholder="Name" tabindex="2">
+          <input type="text" name="userSurName" placeholder="Sur name" tabindex="3">
+          <button type="submit" tabindex="4" class="button-next">Create question</button>
         </div>
       </form>
     </div>

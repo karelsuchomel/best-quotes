@@ -30,7 +30,9 @@ function showForm(ev) {
   formWrap[0].className += ' visible';
 
   var contentBg = document.getElementById('content');
-  contentBg.className += ' dimmed';
+
+  var textWrap = document.getElementsByClassName('quote-wrap');
+  textWrap[0].className += ' faded'
 
   document.getElementById('add-quote').removeEventListener('click', showForm);
 
@@ -48,6 +50,9 @@ function closeForm(ev) {
   var contentBg = document.getElementById('content');
   contentBg.classList.remove('dimmed');
   contentBg.removeEventListener('click', closeForm);
+
+  var textWrap = document.getElementsByClassName('quote-wrap');
+  textWrap[0].classList.remove('faded');
 
   setTimeout(function() {
     formWrap[0].classList.remove('hide');

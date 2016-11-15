@@ -14,13 +14,14 @@ html
       
   body
     #content
-      .quote-wrap Insert text here
+      .quote-wrap Insert text here, insert text here
 
-      #add-quote.add-quote-button
+      button(tabindex="2")#add-quote.add-quote-button
         .dot-button
         .dot-button
         .dot-button
 
+    // TODO - ability to go back in form
     .form-wrap
         .header-progress
           .dot.current
@@ -29,17 +30,17 @@ html
         form(action="", method="POST", class="step-content")
           .step.is-showing
             span Step 1
-            input(type="text", name="userName", placeholder="Name")
-            input(type="text", name="userSurName", placeholder="Sur name")
-            button(type="button" class="button-next") Next
+            input(type="text", name="userName", placeholder="Name", tabindex="2")
+            input(type="text", name="userSurName", placeholder="Sur name", tabindex="3")
+            button(type="button" class="button-next", tabindex="4") Next
           .step
             span Step 2
-            textarea(type="text", name="userSurName", placeholder="Sur name")
-            button(type="button" class="button-next") Next
+            textarea(type="text", name="userSurName", placeholder="Sur name", tabindex="2")
+            button(type="button", class="button-next", tabindex="3") Next
           .step
             span Step 3
-            input(type="text", name="userName", placeholder="Name")
-            input(type="text", name="userSurName", placeholder="Sur name")
-            button(type="submit", class="button-next") Create question
+            input(type="text", name="userName", placeholder="Name", tabindex="2")
+            input(type="text", name="userSurName", placeholder="Sur name", tabindex="3")
+            button(type="submit", class="button-next", tabindex="4") Create question
 
     script(src="step-form-behave.js")
