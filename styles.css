@@ -5,8 +5,7 @@ html, body {
 
 #content {
   position: relative;
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100vh;
   background: #7c7ce5;
 }
 
